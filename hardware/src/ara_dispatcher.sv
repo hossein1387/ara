@@ -1597,6 +1597,7 @@ module ara_dispatcher import ara_pkg::*; import rvv_pkg::*; #(
                 end
                 6'b000100: ara_req_d.op = ara_pkg::VFMIN;
                 6'b000110: ara_req_d.op = ara_pkg::VFMAX;
+                6'b010111: ara_req_d.op = ara_pkg::VFMERGE;
                 6'b100100: ara_req_d.op = ara_pkg::VFMUL;
                 6'b100111: begin
                   ara_req_d.op             = ara_pkg::VFRSUB;
