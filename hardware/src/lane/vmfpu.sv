@@ -434,8 +434,14 @@ module vmfpu import ara_pkg::*; import rvv_pkg::*; import fpnew_pkg::*; #(
       end
       VFMUL :
         fp_op = MUL;
-      VFMACC, VFMADD:
-        fp_op = FMADD;
+      VFMACC, VFMADD, VFMSAC: begin
+        fp_op      = FMADD;
+        fp_sign[2] = vinsn_issue_q.op == VFMSAC;
+      end
+      VFNMACC, VFNMSAC: begin
+        fp_op      = FNMSUB;
+        fp_sign[2] = vinsn_issue_q.op == VFNMACC;
+      end
       VFMIN : begin
         fp_op = MINMAX;
         fp_rm = RNE;
