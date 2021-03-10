@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   - Vector single-width floating-point multiply instructions (vfmul)
   - Vector single-width floating-point fused multiply-add instructions (vfmacc, vfmadd)
   - Vector single-width floating-point min/max instructions (vfmin, vfmax)
+  - Vector floating-point merge instruction (vfmerge)
+  - Vector floating-point move instruction (vfmv)
 - Software implementation of a floating-point matrix multiplication kernel
 
 ## 0.6.0 - 2020-02-24
