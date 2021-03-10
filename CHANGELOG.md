@@ -10,8 +10,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Hardware support for:
   - Vector single-width floating-point add/subtract instructions (vfadd, vfsub, vfrsub)
+  - Vector widening floating-point add/subtract instructions (vfwadd, vfwsub, vfwadd.w, vfwsub.w)
   - Vector single-width floating-point multiply instructions (vfmul)
+  - Vector widening floating-point multiply instructions (vfwmul)
   - Vector single-width floating-point fused multiply-add instructions (vfmacc, vfmadd)
+  - Vector widening floating-point fused multiply-add instructions (vfwmacc, vfwnmacc, vfwmsac, vfwnmsac)
   - Vector single-width floating-point min/max instructions (vfmin, vfmax)
 - Software implementation of a floating-point matrix multiplication kernel
 
